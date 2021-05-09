@@ -1,0 +1,105 @@
+/* Start Variables */
+:root{
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+}
+/* End Variables */
+
+/* Start Global Ruls */
+html{scroll-behavior: smooth;}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+}
+@media (max-width:375px){
+    body{
+        height: 1200px;
+    }
+}
+/* End Global Ruls */
+.container{
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+@media (max-width:375px){
+    .container{
+        flex-direction: column;
+    }
+}
+
+
+.help .top{
+    background-color: hsl(244, 38%, 16%);
+    color: white;
+    width: 540px;
+    padding: 80px;
+    height: 446px;
+    border-radius: 10px 0 0 10px;
+}
+@media (max-width:375px){
+    .help .top{
+        width: 300px;
+        text-align: center;
+        padding: 25px;
+        height: 650px;
+        border-radius: 0px 0px 10px 10px;
+        margin-top: -3px;
+    }
+}
+
+.help .top h1 span{color: hsl(277, 64%, 61%);}
+
+.help .top p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.bottom{display: flex;justify-content: space-between;margin-top: 30px;}
+
+@media (max-width:375px){
+    .bottom{
+        flex-direction: column;
+    }
+}
+
+.bottom .one{text-transform: uppercase;font-family: 'Lexend Deca', sans-serif;}
+
+.bottom .one p{font-size: 15px;margin-top: -15px;}
+
+.image{position: relative;}
+
+.image img{border-radius: 0 10px 10px 0;}
+
+.image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    background-color: hsl(277, 64%, 61%, 0.60);
+    border-radius: 0 10px 10px 0;
+}
+@media (max-width:375px){
+    .image{
+        order: -1;
+    margin-top: 100px;
+    }
+    .image img{
+        width: 300px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .image::before{
+        border-radius: 10px 10px 0px 0px;
+    }
+}
